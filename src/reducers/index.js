@@ -4,6 +4,7 @@ const initialState = {
   maximumIpcValue: undefined,
   minimumIpcValue: undefined,
   closingIpcValue: undefined,
+  currentIpcValue: undefined,
   user: {},
   error: null,
 };
@@ -11,7 +12,7 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   switch (action.type) {
 
-    case 'GET_HISTORICAL_IPC_LIST': {
+    case 'SET_HISTORICAL_IPC_LIST': {
       const result = {
         ...state,
         historicalIpcList: action.payload,
@@ -20,10 +21,22 @@ const reducer = (state = initialState, action) => {
       return result;
     };
 
-    case 'GET_HISTORICAL_IPC_ERROR': {
+    case 'SET_HISTORICAL_IPC_ERROR': {
       const result = {
         ...state,
         error: action.payload,
+      };
+      return result;
+    };
+
+    case 'SET_INDICATORS_MARKET_IPC': {
+      const result = {
+        ...state,
+        openingIpcValue: action.payload.opening,
+        maximumIpcValue: action.payload.maximum,
+        minimumIpcValue: action.payload.minimum,
+        closingIpcValue: action.payload.closing,
+        currentIpcValue: action.payload.current,
       };
       return result;
     };

@@ -1,23 +1,25 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { getHistoricalIpcError, getHistoricalIpcList } from '../actions';
+import { setHistoricalIpcError, setHistoricalIpcList, setIndicatorsMarketIpc } from '../actions';
 import IpcInfo from '../containers/IpcInfo';
 import Login from '../containers/Login';
 import Register from '../containers/Register';
 import NotFound from '../containers/NotFound';
 import useInitialState from '../hooks/useInitialState';
+import getIndicatorsMarketIpc from '../utils/getIndicatorMarketIpc';
 
 const RoutesIPC = (props) => {
-  const { getHistoricalIpcError, getHistoricalIpcList } = props;
+  const { setHistoricalIpcError, setHistoricalIpcList, setIndicatorsMarketIpc } = props;
   const historicalIpc = useInitialState();
 
   if (!historicalIpc.error) {
     if (historicalIpc.data.length > 0) {
-      getHistoricalIpcList(historicalIpc.data);
+      setHistoricalIpcList(historicalIpc.data);
+      setIndicatorsMarketIpc(getIndicatorsMarketIpc(historicalIpc.data));
     }
   } else {
-    getHistoricalIpcError(historicalIpc.error);
+    setHistoricalIpcError(historicalIpc.error);
   }
 
   return (
@@ -33,8 +35,9 @@ const RoutesIPC = (props) => {
 };
 
 const mapDispatchToProps = {
-  getHistoricalIpcList,
-  getHistoricalIpcError,
+  setHistoricalIpcList,
+  setHistoricalIpcError,
+  setIndicatorsMarketIpc,
 };
 
 export default connect(null, mapDispatchToProps)(RoutesIPC);

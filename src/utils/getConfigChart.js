@@ -28,7 +28,7 @@ const configChart = {
       size: 0,
     },
     title: {
-      text: 'IPC Index',
+      text: '^MMX IPC Mexico',
       align: 'left',
     },
     stroke: {
@@ -41,10 +41,8 @@ const configChart = {
     },
     xaxis: {
       labels: {
-        rotate: -35,
-        rotateAlways: true,
         formatter: (value) => {
-          return moment(new Date(value)).format('MMM-DD-YYYY HH:mm:ss');
+          return moment(new Date(value)).format('HH:mm:ss');
         },
       },
       type: 'datetime',
@@ -55,27 +53,14 @@ const configChart = {
   },
 };
 
-const formatNummber = (number) => {
-  let num = number;
-  num = num.toString().replace(/\$|\,/g, '');
-
-  const sign = (num == (num = Math.abs(num)));
-  num = Math.floor(num * 100 + 0.50000000001);
-  let cents = num % 100;
-  num = Math.floor(num / 100).toString();
-  if (cents < 10) {
-    cents = `0${cents}`;
-  }
-
-  for (let i = 0; i < Math.floor((num.length - (1 + i)) / 3); i++) {
-    num = `${num.substring(0, num.length - (4 * i + 3))}.${num.substring(num.length - (4 * i + 3))}`;
-  }
-  return (`${((sign) ? '' : '-') + num},${cents}`);
-};
-
 const convertDataToArray = (data) => {
   const newArray = [];
-  data.map((item) => (newArray.push([item.Fecha, formatNummber(item.Precio)])));
+  data.map((item) => {
+    if (moment(new Date(item.Fecha)).format('HH:mm:ss') >= '08:29:00') {
+      newArray.push([item.Fecha, new Intl.NumberFormat('de-DE').format(item.Precio)]);
+    }
+    return newArray;
+  });
   return newArray;
 };
 

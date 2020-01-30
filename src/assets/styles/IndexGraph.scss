@@ -13,10 +13,27 @@
 
     .graph--date {
       padding: 5px 10px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      font-size: 18px;
     }
 
     .graph--current_value {
       padding: 5px 10px;
+      
+      .current_text {
+        font-weight: 700;
+      }
+
+      .current_per {
+        padding-left: 5px;
+      }
+      .current_per.down {
+        color: #FD5F5D;
+      }
+      .current_per.up {
+        color: rgb(6, 177, 80);
+      }
     }
   }
 
