@@ -41,6 +41,14 @@ const reducer = (state = initialState, action) => {
       return result;
     };
 
+    case 'LOGIN_USER': {
+      const result = {
+        ...state,
+        user: action.payload,
+      };
+      return result;
+    };
+
     default:
       return state;
   };

@@ -20,3 +20,11 @@ export const setIndicatorsMarketIpc = (payload) => {
     payload,
   });
 };
+
+export const loginUser = (payload) => {
+  return ({
+    type: 'LOGIN_USER',
+    payload,
+  });
+};
+
