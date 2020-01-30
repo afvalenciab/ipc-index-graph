@@ -7,4 +7,20 @@
   padding: 15px 10px;
   background: #FFF;
   border-radius: 10px;
+
+  .graph--header {
+    display: flex;
+
+    .graph--date {
+      padding: 5px 10px;
+    }
+
+    .graph--current_value {
+      padding: 5px 10px;
+    }
+  }
+
+  .graph--timeseries{
+    height: 400px;
+  }
 }

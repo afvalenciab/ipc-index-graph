@@ -15,10 +15,10 @@ const Header = () => {
             <Link to='/'>Administrar</Link>
           </li>
           <li>
-            <Link to='/'>Ingresar</Link>
+            <Link to='/login'>Ingresar</Link>
           </li>
           <li className='menu--register'>
-            <Link to='/'>Crear cuenta</Link>
+            <Link to='/register'>Crear cuenta</Link>
           </li>
         </ul>
       </nav>
