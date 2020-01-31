@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import moment from 'moment';
 
 const useInitialState = () => {
   const [historicalIpc, setHistoricalIpc] = useState({
@@ -11,7 +12,7 @@ const useInitialState = () => {
       .then((response) => response.json())
       .then((data) => setHistoricalIpc({
         ...historicalIpc,
-        data: data.resultObj,
+        data: data.resultObj.filter((item) => moment(new Date(item.Fecha)).format('HH:mm:ss') >= '08:30:00'),
       }))
       .catch((error) => setHistoricalIpc({
         ...historicalIpc,

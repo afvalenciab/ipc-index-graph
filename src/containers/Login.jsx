@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { loginUser } from '../actions';
+import { loginRequest, loginUser } from '../actions';
+import MessageError from '../components/MessageError';
 import '../assets/styles/Login.scss';
 
 const Login = (props) => {
-  const { loginUser, user } = props;
+  const { loginRequest, loginUser, user } = props;
   const [form, setForm] = useState({
     email: '',
   });
@@ -19,7 +20,11 @@ const Login = (props) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    loginUser(form);
+    loginRequest(form);
+  };
+
+  const handleChangePage = () => {
+    loginUser({});
   };
 
   useEffect(() => {
@@ -36,6 +41,7 @@ const Login = (props) => {
           <input name='email' type='email' placeholder='Correo' onChange={handleInput} required />
           <input name='password' type='Password' placeholder='Constraseña' onChange={handleInput} required />
           <button type='submit'>Iniciar sesión</button>
+          {!user && <MessageError />}
         </form>
         <div className='login__social'>
           <a href='/login'>
@@ -45,7 +51,7 @@ const Login = (props) => {
         <div className='login__singup'>
           <p>
             ¿Aún no estás registrado?
-            <Link to='/register'>
+            <Link to='/register' onClick={handleChangePage}>
               Regístrate
             </Link>
           </p>
@@ -62,6 +68,7 @@ const mapStateToProps = (state) => {
 };
 
 const mapDispatchToProps = {
+  loginRequest,
   loginUser,
 };
 

@@ -36,7 +36,7 @@ const configChart = {
     },
     yaxis: {
       title: {
-        text: 'Price',
+        text: 'Precio',
       },
     },
     xaxis: {
@@ -55,12 +55,7 @@ const configChart = {
 
 const convertDataToArray = (data) => {
   const newArray = [];
-  data.map((item) => {
-    if (moment(new Date(item.Fecha)).format('HH:mm:ss') >= '08:29:00') {
-      newArray.push([item.Fecha, new Intl.NumberFormat('de-DE').format(item.Precio)]);
-    }
-    return newArray;
-  });
+  data.map((item) => newArray.push([item.Fecha, new Intl.NumberFormat('de-DE').format(item.Precio)]));
   return newArray;
 };
 

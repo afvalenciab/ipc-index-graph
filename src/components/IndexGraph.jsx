@@ -10,6 +10,7 @@ const IndexGraph = (props) => {
   const configChart = getConfigChart(historicalIpcList);
   const [timeSeriesChart, setTimeSeriesChart] = useState(configChart);
   const symbolPercentage = currentIpcValue.Porcentaje >= 0;
+  moment.locale('es');
 
   useEffect(() => {
     setTimeSeriesChart(getConfigChart(historicalIpcList));
@@ -23,7 +24,7 @@ const IndexGraph = (props) => {
           <span className='current_text'>Valor Actual: </span>
           {new Intl.NumberFormat('de-DE').format(currentIpcValue.Precio)}
           <span className={`current_per ${symbolPercentage ? 'up' : 'down'}`}>
-            {`(${symbolPercentage ? '+' : ''} ${currentIpcValue.Porcentaje})`}
+            {`(${symbolPercentage ? '+' : ''} ${currentIpcValue.Porcentaje}%)`}
           </span>
         </div>
       </div>

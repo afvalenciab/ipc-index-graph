@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { loginUser } from '../actions';
 import '../assets/styles/Header.scss';
 
-const Header = (props) => {
+const Header = props => {
   const { user } = props;
   const hasUser = Object.keys(user).length > 0;
 
@@ -21,11 +21,15 @@ const Header = (props) => {
       </h1>
       <nav className='menu'>
         <ul>
-          <li>
-            <Link to='/'>Administrar</Link>
-          </li>
+          {hasUser && user.isAdmin && (
+            <li>
+              <Link to='/'>Administrar</Link>
+            </li>
+          )}
           {hasUser ? (
-            <li><Link to='#user'>{user.email.split('@')[0]}</Link></li>
+            <li>
+              <Link to='#user'>{user.email.split('@')[0]}</Link>
+            </li>
           ) : (
             <li>
               <Link to='/login'>Ingresar</Link>
@@ -34,7 +38,9 @@ const Header = (props) => {
 
           {hasUser ? (
             <li className='menu--register'>
-              <Link to='#user' onClick={handleLogout}>Cerrar sesión</Link>
+              <Link to='#user' onClick={handleLogout}>
+                Cerrar sesión
+              </Link>
             </li>
           ) : (
             <li className='menu--register'>
@@ -47,14 +53,14 @@ const Header = (props) => {
   );
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = state => {
   return {
-    user: state.user,
+    user: state.user
   };
 };
 
 const mapDispatchToProps = {
-  loginUser,
+  loginUser
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
