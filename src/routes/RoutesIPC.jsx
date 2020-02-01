@@ -5,13 +5,16 @@ import { setHistoricalIpcError, setHistoricalIpcList, setIndicatorsMarketIpc } f
 import IpcInfo from '../containers/IpcInfo';
 import Login from '../containers/Login';
 import Register from '../containers/Register';
+import UserManagement from '../containers/UserManagement';
 import NotFound from '../containers/NotFound';
 import useInitialState from '../hooks/useInitialState';
 import getIndicatorsMarketIpc from '../utils/getIndicatorMarketIpc';
 
 const RoutesIPC = (props) => {
-  const { setHistoricalIpcError, setHistoricalIpcList, setIndicatorsMarketIpc } = props;
+  const { setHistoricalIpcError, setHistoricalIpcList, setIndicatorsMarketIpc, user } = props;
   const historicalIpc = useInitialState();
+
+  const isAdmin = Object.keys(user).length > 0 && user.isAdmin;
 
   if (!historicalIpc.error) {
     if (historicalIpc.data.length > 0) {
@@ -28,10 +31,17 @@ const RoutesIPC = (props) => {
         <Route exact path='/' component={IpcInfo} />
         <Route exact path='/login' component={Login} />
         <Route exact path='/register' component={Register} />
+        <Route exact path='/management' component={isAdmin ? UserManagement : NotFound} />
         <Route component={NotFound} />
       </Switch>
     </BrowserRouter>
   );
+};
+
+const mapStateToProps = (state) => {
+  return {
+    user: state.user,
+  };
 };
 
 const mapDispatchToProps = {
@@ -40,4 +50,4 @@ const mapDispatchToProps = {
   setIndicatorsMarketIpc,
 };
 
-export default connect(null, mapDispatchToProps)(RoutesIPC);
+export default connect(mapStateToProps, mapDispatchToProps)(RoutesIPC);

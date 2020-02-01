@@ -1,5 +1,6 @@
 const initialState = {
   historicalIpcList: [],
+  usersList: [],
   openingIpcValue: undefined,
   maximumIpcValue: undefined,
   minimumIpcValue: undefined,
@@ -45,6 +46,14 @@ const reducer = (state = initialState, action) => {
       const result = {
         ...state,
         user: action.payload,
+      };
+      return result;
+    };
+
+    case 'SET_USERS_LIST': {
+      const result = {
+        ...state,
+        usersList: action.payload.data,
       };
       return result;
     };

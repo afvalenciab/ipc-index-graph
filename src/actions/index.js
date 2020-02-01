@@ -63,3 +63,47 @@ export const registerUser = (payload) => {
   };
 };
 
+export const setUsersList = (payload) => {
+  return ({
+    type: 'SET_USERS_LIST',
+    payload,
+  });
+};
+
+export const setUsersListRequest = (user) => {
+  return (dispatch) => {
+    axios({
+      url: 'http://localhost:3000/api/users/',
+      headers: { Authorization: `Bearer ${user.token}` },
+      method: 'get',
+    })
+      .then(({ data }) => dispatch(setUsersList(data)))
+      .catch((err) => dispatch(setHistoricalIpcError(err)));
+  };
+};
+
+export const updateUser = (user, id, data) => {
+  return (dispatch) => {
+    axios({
+      url: `http://localhost:3000/api/users/update/${id}`,
+      headers: { Authorization: `Bearer ${user.token}` },
+      method: 'put',
+      data,
+    })
+      .then(() => dispatch(setUsersListRequest(user)))
+      .catch((err) => dispatch(setHistoricalIpcError(err)));
+  };
+};
+
+export const deleteUser = (user, id) => {
+  return (dispatch) => {
+    axios({
+      url: `http://localhost:3000/api/users/delete/${id}`,
+      headers: { Authorization: `Bearer ${user.token}` },
+      method: 'delete',
+    })
+      .then(() => dispatch(setUsersListRequest(user)))
+      .catch((err) => dispatch(setHistoricalIpcError(err)));
+  };
+};
+

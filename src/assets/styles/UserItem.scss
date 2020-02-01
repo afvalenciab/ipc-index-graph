@@ -1,0 +1,33 @@
+.user--item {
+  display: grid;
+  grid-template-columns: 3fr 2fr 1fr 1fr;
+  grid-gap: 10px;
+  box-sizing: border-box;
+  align-items: center;
+  padding: 15px 0;
+  font-weight: 300;
+
+  p {
+    margin: 0;
+  }
+
+  button {
+    border: 0;
+    outline: none;
+    color: #fff;
+    background: rgba(165, 38, 42,.8);
+    padding: 5px 0;
+    border-radius: 5px;
+    letter-spacing: 1.2px;
+    cursor: pointer;
+    transition: .3s;
+    will-change: transform;
+    width: 90%;
+  }
+  button:hover {
+    background: rgba(165, 38, 42, 1);
+  }
+  button:active {
+    transform: scale(.95);
+  }
+}

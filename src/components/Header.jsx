@@ -1,29 +1,33 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import { loginUser } from '../actions';
 import '../assets/styles/Header.scss';
 
-const Header = props => {
+const Header = (props) => {
   const { user } = props;
+  const history = useHistory();
   const hasUser = Object.keys(user).length > 0;
 
   const handleLogout = () => {
     const { loginUser } = props;
     loginUser({});
+    history.push('/');
   };
 
   return (
     <header className='header'>
-      <h1>
-        IPC
-        <span>Index</span>
-      </h1>
+      <Link to='/'>
+        <h1>
+          IPC
+          <span>Index</span>
+        </h1>
+      </Link>
       <nav className='menu'>
         <ul>
           {hasUser && user.isAdmin && (
             <li>
-              <Link to='/'>Administrar</Link>
+              <Link to='/management'>Administrar</Link>
             </li>
           )}
           {hasUser ? (
@@ -53,14 +57,14 @@ const Header = props => {
   );
 };
 
-const mapStateToProps = state => {
+const mapStateToProps = (state) => {
   return {
-    user: state.user
+    user: state.user,
   };
 };
 
 const mapDispatchToProps = {
-  loginUser
+  loginUser,
 };
 
 export default connect(mapStateToProps, mapDispatchToProps)(Header);
