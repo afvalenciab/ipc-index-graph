@@ -1,6 +1,6 @@
 import moment from 'moment';
 
-const configChart = {
+export const initConfigChart = {
   series: [
     {
       name: 'IPC Index',
@@ -59,10 +59,8 @@ const convertDataToArray = (data) => {
   return newArray;
 };
 
-const getConfigChart = (data) => {
+export const getConfigChart = (data) => {
   const dataConverted = convertDataToArray(data);
-  configChart.series[0].data = dataConverted;
-  return configChart;
+  initConfigChart.series[0].data = dataConverted;
+  return initConfigChart;
 };
-
-export default getConfigChart;

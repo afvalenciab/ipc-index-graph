@@ -35,6 +35,62 @@
         color: rgb(6, 177, 80);
       }
     }
+
+    .graph--options {
+      display: flex;
+
+      figure {
+        margin: 0px 8px;
+        background: rgb(210, 212, 216);
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        will-change: transform;
+        opacity: .6;
+
+        img{
+          vertical-align: top;
+          width: 25px;
+        }
+      }
+
+      figure:active {
+        transform: scale(.95);
+      }
+
+      figure:hover {
+        opacity: 1;
+      }
+
+      figure.isActive {
+        opacity: 1;
+      }
+
+      .graph--candle_options {
+        display: flex;
+
+        .candle__min {
+          margin: 3px;
+          border-radius: 50%;
+          background: rgb(237, 236, 236);
+          width: 25px;
+          height: 25px;
+          font-size: 10px;
+          text-align: center;
+          line-height: 26px;
+          font-weight: 300;
+          cursor: pointer;
+          box-sizing: border-box;
+        }
+
+        .candle__min.isActive {
+          background: rgba(0,0,0,.8);
+          border: none;
+          color: #fff;
+          font-weight: 700;
+        }
+      }
+    }
   }
 
   .graph--timeseries{
