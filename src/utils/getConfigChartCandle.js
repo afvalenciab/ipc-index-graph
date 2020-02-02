@@ -14,7 +14,7 @@ export const initConfigChartCandle = {
       type: 'candlestick',
     },
     title: {
-      text: '^MMX IPC Mexico - Gráfico de Velas',
+      text: '^MMX IPC Mexico',
       align: 'left'
     },
     tooltip: {
@@ -91,7 +91,6 @@ const convertDataToCandleFormat = (data, time) => {
 };
 
 export const getConfigChartCandle = (data, time) => {
-  debugger;
   const dataConverted = convertDataToCandleFormat(data, time);
   initConfigChartCandle.series[0].data = dataConverted;
   return initConfigChartCandle;

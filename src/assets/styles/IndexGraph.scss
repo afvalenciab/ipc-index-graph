@@ -10,6 +10,7 @@
 
   .graph--header {
     display: flex;
+    flex-wrap: wrap;
 
     .graph--date {
       padding: 5px 10px;
@@ -38,13 +39,17 @@
 
     .graph--options {
       display: flex;
+      padding: 5px 0px;
 
       figure {
+        width: 33px;
+        height: 33px;
         margin: 0px 8px;
         background: rgb(210, 212, 216);
         padding: 5px;
         border-radius: 5px;
         cursor: pointer;
+        box-sizing: border-box;
         will-change: transform;
         opacity: .6;
 
@@ -95,5 +100,17 @@
 
   .graph--timeseries{
     height: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .index--graph {
+    margin: 0px 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .index--graph {
+    margin: 0px 2px;
   }
 }

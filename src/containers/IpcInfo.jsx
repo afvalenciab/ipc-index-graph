@@ -2,6 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import Header from '../components/Header';
 import IndexInfo from '../components/IndexInfo';
+import Loading from '../components/Loading';
 import IndexGraph from '../components/IndexGraph';
 import InitMessage from '../components/InitMessage';
 import Footer from '../components/Footer';
@@ -21,7 +22,7 @@ const IpcInfo = (props) => {
       )}
 
       {hasUser ? (
-        historicalIpcList.length > 0 ? <IndexGraph /> : 'Loading...'
+        historicalIpcList.length > 0 ? <IndexGraph /> : <Loading />
       ) : (
         <InitMessage />
       )}

@@ -43,11 +43,6 @@ const Login = (props) => {
           <button type='submit'>Iniciar sesión</button>
           {!user && <MessageError />}
         </form>
-        <div className='login__social'>
-          <a href='/login'>
-            Iniciar sesión con Google
-          </a>
-        </div>
         <div className='login__singup'>
           <p>
             ¿Aún no estás registrado?

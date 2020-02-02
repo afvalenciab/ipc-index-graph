@@ -41,3 +41,42 @@
     transform: translateY(-5px);
   }
 }
+
+@media screen and (max-width: 900px ) {
+  .init__container{
+  
+    .init__description {
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 768px ) {
+  .init__container{
+  
+    .init__description {
+      width: 100%;
+      font-size: 24px;
+    }
+
+    .init__invitation {
+      margin: 10px 0;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 480px ) {
+  .init__container{
+    padding: 10px 20px;
+  
+    .init__description {
+      font-size: 24px;
+      width: 100%;
+    }
+  
+    .init__invitation {
+      font-size: 16px;
+    }
+  }
+}

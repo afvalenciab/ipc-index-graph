@@ -11,3 +11,10 @@
     color: rgba(0,0,0,.8);
   }
 }
+
+@media screen and (max-width: 480px) {
+  .footer {
+    padding: 0px 20px;
+    font-size: 10px;
+  }
+}

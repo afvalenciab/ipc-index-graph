@@ -37,11 +37,6 @@ const Register = (props) => {
           <input name='password' type='Password' placeholder='Constraseña' onChange={handleInput} required />
           <button type='submit'>Registrarme</button>
         </form>
-        <div className='register__social'>
-          <a href='/register'>
-            Registrarme con Google
-          </a>
-        </div>
         <div className='register__login'>
           <p>
             ¿Ya estás registrado?

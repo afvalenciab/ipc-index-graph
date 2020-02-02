@@ -72,7 +72,6 @@ const IndexGraph = (props) => {
   };
 
   useEffect(() => {
-    debugger;
     const configArea = getConfigChart(historicalIpcList);
     const configCandle = getConfigChartCandle(historicalIpcList, 15);
 

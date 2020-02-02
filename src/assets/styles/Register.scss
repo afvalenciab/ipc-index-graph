@@ -34,7 +34,7 @@ $color-font: #000;
 
 .register {
   display: grid;
-  grid-template-rows: repeat(4, auto);
+  grid-template-rows: repeat(3, auto);
   grid-row-gap: 5px;
   align-items: center;
   align-content: space-evenly;
@@ -95,17 +95,6 @@ $color-font: #000;
     }
   }
 
-  .register__social {
-    a {
-      display: block;
-      margin-bottom: 10px;
-      @extend %a-settings;
-    }
-    a:hover {
-      @extend %a-transform;
-    }
-  }
-
   .register__login {
     font-size: 0.9em;
     p {
@@ -122,6 +111,24 @@ $color-font: #000;
     }
     a:hover {
       @extend %a-transform;
+    }
+  }
+}
+
+@media screen and (max-width: 480px ) {
+  .container__register {
+    padding: 0px;
+  }
+  
+  .register {
+    font-size: 15px;
+    border: 0px;
+    padding: 10px 30px;
+    width: 100%;
+    box-sizing: border-box;
+  
+    h2 {
+      font-size: 50px;
     }
   }
 }

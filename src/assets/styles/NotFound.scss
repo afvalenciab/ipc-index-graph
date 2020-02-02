@@ -1,0 +1,48 @@
+// 04C0FC
+.container--notfound {
+  height: 100vh;
+  background: #131D39;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    margin: 0;
+    font-size: 100px;
+    font-weight: 300;
+    letter-spacing: 5px;
+    color: #04C0FC;
+    animation-name: beat;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+  }
+
+  h2 {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 900;
+    color: #FFB507;
+    letter-spacing: 10px;
+  }
+
+  h3 {
+    margin: 0;
+    font-size: 20px;
+    color: #fff;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+  } 
+}
+
+@keyframes beat {
+  0% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100%{
+    opacity: .2;
+    transform: scale(.5);
+  }
+}
