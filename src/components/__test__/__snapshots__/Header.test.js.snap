@@ -1,0 +1,43 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header testing Match Snapshot 1`] = `
+<header
+  className="header"
+>
+  <a
+    href="/"
+    onClick={[Function]}
+  >
+    <h1>
+      IPC
+      <span>
+        Index
+      </span>
+    </h1>
+  </a>
+  <nav
+    className="menu"
+  >
+    <ul>
+      <li>
+        <a
+          href="/login"
+          onClick={[Function]}
+        >
+          Ingresar
+        </a>
+      </li>
+      <li
+        className="menu--register"
+      >
+        <a
+          href="/register"
+          onClick={[Function]}
+        >
+          Crear cuenta
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+`;

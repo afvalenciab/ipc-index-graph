@@ -1,0 +1,11 @@
+.index--info {
+  padding: 0px 50px;
+  display: flex;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 480px) {
+  .index--info {
+    padding: 0px 20px;
+  }
+}
