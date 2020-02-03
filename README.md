@@ -52,8 +52,10 @@ npm run test:coverage
 
 * The application working with an API. It was developed using: express.js, passport.js, MongoDB, jwt, Sendgrid. The API allows to manage the user authentication using Basic Strategy and authorization using Json Web Token. Check the API [ipc-index-api](https://github.com/afvalenciab/ipc-index-api).
 
-* User administrador by default: 
+* User administrator by default: 
+```
   user: ipcrootadmin@gmail.com 
   Pass: admin123
+```
 
 * The application sends a notification to the system administrators when the user enters the password the wrong way for the third time.
