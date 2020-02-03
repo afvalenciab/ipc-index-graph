@@ -2,7 +2,6 @@ const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const webpack = require('webpack');
-const dotenv = require('dotenv');
 
 module.exports = {
   entry: './src/index.js',
@@ -20,12 +19,12 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: {
-          loader: "babel-loader"
-        }
+          loader: 'babel-loader',
+        },
       },
       {
         test: /\.html$/,
-        use: 'html-loader'
+        use: 'html-loader',
       },
       {
         test: /\.scss$/,
@@ -34,18 +33,18 @@ module.exports = {
             loader: MiniCssExtractPlugin.loader,
           },
           'css-loader',
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
       {
         test: /\.svg$/,
         loader: 'url-loader',
         options: {
-          name: 'assets/fonts/[name].[ext]',
-          limit: 1000,
-        }
-      }
-    ]
+          name: 'assets/static/[name].[ext]',
+          limit: 241,
+        },
+      },
+    ],
   },
   devServer: {
     hot: true,
@@ -56,10 +55,10 @@ module.exports = {
     new webpack.HotModuleReplacementPlugin(),
     new HtmlWebpackPlugin({
       template: './public/index.html',
-      filename: './index.html'
+      filename: './index.html',
     }),
     new MiniCssExtractPlugin({
-      filename: 'assets/[name].css'
-    })
-  ]
+      filename: 'assets/[name].css',
+    }),
+  ],
 };

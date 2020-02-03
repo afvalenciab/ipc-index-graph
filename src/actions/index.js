@@ -32,7 +32,7 @@ export const loginUser = (payload) => {
 export const loginRequest = ({ email, password }) => {
   return (dispatch) => {
     axios({
-      url: 'http://localhost:3000/api/auth/login',
+      url: 'https://ipcindex.afvalenciab.now.sh/api/auth/login',
       method: 'post',
       auth: {
         username: email,
@@ -50,7 +50,7 @@ export const loginRequest = ({ email, password }) => {
 export const registerUser = (payload) => {
   return (dispatch) => {
     axios({
-      url: 'http://localhost:3000/api/auth/register',
+      url: 'https://ipcindex.afvalenciab.now.sh/api/auth/register',
       method: 'post',
       data: {
         ...payload,
@@ -73,7 +73,7 @@ export const setUsersList = (payload) => {
 export const setUsersListRequest = (user) => {
   return (dispatch) => {
     axios({
-      url: 'http://localhost:3000/api/users/',
+      url: 'https://ipcindex.afvalenciab.now.sh/api/users/',
       headers: { Authorization: `Bearer ${user.token}` },
       method: 'get',
     })
@@ -85,7 +85,7 @@ export const setUsersListRequest = (user) => {
 export const updateUser = (user, id, data) => {
   return (dispatch) => {
     axios({
-      url: `http://localhost:3000/api/users/update/${id}`,
+      url: `https://ipcindex.afvalenciab.now.sh/api/users/update/${id}`,
       headers: { Authorization: `Bearer ${user.token}` },
       method: 'put',
       data,
@@ -98,7 +98,7 @@ export const updateUser = (user, id, data) => {
 export const deleteUser = (user, id) => {
   return (dispatch) => {
     axios({
-      url: `http://localhost:3000/api/users/delete/${id}`,
+      url: `https://ipcindex.afvalenciab.now.sh/api/users/delete/${id}`,
       headers: { Authorization: `Bearer ${user.token}` },
       method: 'delete',
     })

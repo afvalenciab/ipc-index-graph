@@ -4,7 +4,7 @@
   "description": "This project allow to view the IPC index (Indice de Precios y Cotizaciones)",
   "main": "index.js",
   "scripts": {
-    "build": "webpack-cli --config webpack.config.js",
+    "build": "webpack --mode production",
     "start:dev": "webpack-dev-server --mode development",
     "test": "jest",
     "test:coverage": "jest --coverage"
