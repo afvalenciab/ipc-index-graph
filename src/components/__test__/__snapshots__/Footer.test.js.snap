@@ -1,0 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer testing Match Snapshot 1`] = `
+<footer
+  className="footer"
+>
+  <p>
+    IPC Index - Indice de Precios y Cotizaciones.
+  </p>
+  <p>
+    Hecho por Andres Valencia
+  </p>
+</footer>
+`;

@@ -1,0 +1,76 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexInfo testing Match Snapshot 1`] = `
+<section
+  className="index--info"
+>
+  <div
+    className="carousel--data"
+  >
+    <div
+      className="carousel--item_data"
+    >
+      <h2>
+        Apertura
+      </h2>
+      <div
+        className="item--data"
+      >
+        <p
+          className="price"
+        >
+          -
+        </p>
+      </div>
+    </div>
+    <div
+      className="carousel--item_data"
+    >
+      <h2>
+        Máximo
+      </h2>
+      <div
+        className="item--data"
+      >
+        <p
+          className="price"
+        >
+          -
+        </p>
+      </div>
+    </div>
+    <div
+      className="carousel--item_data"
+    >
+      <h2>
+        Mínimo
+      </h2>
+      <div
+        className="item--data"
+      >
+        <p
+          className="price"
+        >
+          -
+        </p>
+      </div>
+    </div>
+    <div
+      className="carousel--item_data"
+    >
+      <h2>
+        Cierre
+      </h2>
+      <div
+        className="item--data"
+      >
+        <p
+          className="price"
+        >
+          -
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+`;

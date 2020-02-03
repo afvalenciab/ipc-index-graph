@@ -1,0 +1,28 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InitMessage testing Match Snapshot 1`] = `
+<section
+  className="init__container"
+>
+  <p
+    className="init__description"
+  >
+    El Índice de Precios y Cotizaciones
+    <span>
+       (IPC) 
+    </span>
+    es el indicador oficial de la evolución del mercado accionario, ya que busca medir el rendimiento de las acciones de mayor tamaño y liquidez listadas en la Bolsa Mexicana de Valores.
+  </p>
+  <p
+    className="init__invitation"
+  >
+    Ingresa y conoce el comportamiento del índice
+  </p>
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Ingresar
+  </button>
+</section>
+`;

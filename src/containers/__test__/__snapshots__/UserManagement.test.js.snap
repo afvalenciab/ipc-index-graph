@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserManagement testing Match Snapshot 1`] = `
+<main
+  className="container--management"
+>
+  <header
+    className="header"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <h1>
+        IPC
+        <span>
+          Index
+        </span>
+      </h1>
+    </a>
+    <nav
+      className="menu"
+    >
+      <ul>
+        <li>
+          <a
+            href="/login"
+            onClick={[Function]}
+          >
+            Ingresar
+          </a>
+        </li>
+        <li
+          className="menu--register"
+        >
+          <a
+            href="/register"
+            onClick={[Function]}
+          >
+            Crear cuenta
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <section
+    className="user--controls"
+  >
+    <h2>
+      Administración de Usuarios
+    </h2>
+    <div
+      className="user--controls_table"
+    >
+      <div
+        className="user--controls_header"
+      >
+        <p>
+          Correo electrónico
+        </p>
+        <p>
+          Ingresos fallidos
+        </p>
+        <p>
+          Admon
+        </p>
+        <p>
+          Eliminar
+        </p>
+      </div>
+      <div
+        className="user--controls_list"
+      />
+    </div>
+  </section>
+  <footer
+    className="footer"
+  >
+    <p>
+      IPC Index - Indice de Precios y Cotizaciones.
+    </p>
+    <p>
+      Hecho por Andres Valencia
+    </p>
+  </footer>
+</main>
+`;

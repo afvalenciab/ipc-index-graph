@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login testing Match Snapshot 1`] = `
+<main
+  className="container__login"
+>
+  <section
+    className="login"
+  >
+    <h2>
+      Inicia sesión
+    </h2>
+    <form
+      onSubmit={[Function]}
+    >
+      <input
+        name="email"
+        onChange={[Function]}
+        placeholder="Correo"
+        required={true}
+        type="email"
+      />
+      <input
+        name="password"
+        onChange={[Function]}
+        placeholder="Constraseña"
+        required={true}
+        type="Password"
+      />
+      <button
+        type="submit"
+      >
+        Iniciar sesión
+      </button>
+    </form>
+    <div
+      className="login__singup"
+    >
+      <p>
+        ¿Aún no estás registrado?
+        <a
+          href="/register"
+          onClick={[Function]}
+        >
+          Regístrate
+        </a>
+      </p>
+    </div>
+  </section>
+</main>
+`;
