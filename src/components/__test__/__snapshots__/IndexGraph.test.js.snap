@@ -1,0 +1,123 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IndexGraph testing Match Snapshot 1`] = `
+<section
+  className="index--graph"
+>
+  <div
+    className="graph--header"
+  >
+    <div
+      className="graph--date"
+    >
+      Invalid date
+    </div>
+    <div
+      className="graph--current_value"
+    >
+      <span
+        className="current_text"
+      >
+        Valor Actual: 
+      </span>
+      0
+      <span
+        className="current_per up"
+      >
+        (+ 0%)
+      </span>
+    </div>
+    <div
+      className="graph--options"
+    >
+      <figure
+        className="graph--area isActive"
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="test-file-stubs"
+        />
+      </figure>
+      <figure
+        className="graph--candle "
+        onClick={[Function]}
+      >
+        <img
+          alt=""
+          src="test-file-stubs"
+        />
+      </figure>
+    </div>
+  </div>
+  <div
+    className="graph--history"
+  >
+    <div
+      className="graph--timeseries"
+    >
+      <div
+        height="100%"
+        options={
+          Object {
+            "chart": Object {
+              "animations": Object {
+                "easing": "linear",
+                "enable": true,
+                "speed": 300,
+              },
+              "height": 350,
+              "stacked": false,
+              "toolbar": Object {
+                "autoSelected": "zoom",
+              },
+              "type": "area",
+            },
+            "dataLabels": Object {
+              "enabled": false,
+            },
+            "markers": Object {
+              "size": 0,
+            },
+            "stroke": Object {
+              "width": 1.5,
+            },
+            "title": Object {
+              "align": "left",
+              "text": "^MMX IPC Mexico",
+            },
+            "tooltip": Object {
+              "shared": false,
+            },
+            "xaxis": Object {
+              "convertedCatToNumeric": false,
+              "labels": Object {
+                "formatter": [Function],
+              },
+              "type": "datetime",
+            },
+            "yaxis": Object {
+              "title": Object {
+                "text": "Precio",
+              },
+            },
+          }
+        }
+        series={
+          Array [
+            Object {
+              "data": Array [],
+              "name": "IPC Index",
+            },
+          ]
+        }
+        type="line"
+        width="100%"
+      />
+    </div>
+    <div
+      className="graph--candlestick"
+    />
+  </div>
+</section>
+`;

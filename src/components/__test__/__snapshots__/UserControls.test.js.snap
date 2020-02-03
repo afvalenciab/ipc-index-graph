@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserControls testing Match Snapshot 1`] = `
+<section
+  className="user--controls"
+>
+  <h2>
+    Administración de Usuarios
+  </h2>
+  <div
+    className="user--controls_table"
+  >
+    <div
+      className="user--controls_header"
+    >
+      <p>
+        Correo electrónico
+      </p>
+      <p>
+        Ingresos fallidos
+      </p>
+      <p>
+        Admon
+      </p>
+      <p>
+        Eliminar
+      </p>
+    </div>
+    <div
+      className="user--controls_list"
+    />
+  </div>
+</section>
+`;

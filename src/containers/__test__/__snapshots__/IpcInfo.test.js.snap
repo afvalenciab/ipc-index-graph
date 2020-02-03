@@ -1,0 +1,88 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`IpcInfo testing Match Snapshot 1`] = `
+<main
+  className="container--ipc"
+>
+  <header
+    className="header"
+  >
+    <a
+      href="/"
+      onClick={[Function]}
+    >
+      <h1>
+        IPC
+        <span>
+          Index
+        </span>
+      </h1>
+    </a>
+    <nav
+      className="menu"
+    >
+      <ul>
+        <li>
+          <a
+            href="/login"
+            onClick={[Function]}
+          >
+            Ingresar
+          </a>
+        </li>
+        <li
+          className="menu--register"
+        >
+          <a
+            href="/register"
+            onClick={[Function]}
+          >
+            Crear cuenta
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <hr
+    style={
+      Object {
+        "border": "0",
+      }
+    }
+  />
+  <section
+    className="init__container"
+  >
+    <p
+      className="init__description"
+    >
+      El Índice de Precios y Cotizaciones
+      <span>
+         (IPC) 
+      </span>
+      es el indicador oficial de la evolución del mercado accionario, ya que busca medir el rendimiento de las acciones de mayor tamaño y liquidez listadas en la Bolsa Mexicana de Valores.
+    </p>
+    <p
+      className="init__invitation"
+    >
+      Ingresa y conoce el comportamiento del índice
+    </p>
+    <button
+      onClick={[Function]}
+      type="button"
+    >
+      Ingresar
+    </button>
+  </section>
+  <footer
+    className="footer"
+  >
+    <p>
+      IPC Index - Indice de Precios y Cotizaciones.
+    </p>
+    <p>
+      Hecho por Andres Valencia
+    </p>
+  </footer>
+</main>
+`;

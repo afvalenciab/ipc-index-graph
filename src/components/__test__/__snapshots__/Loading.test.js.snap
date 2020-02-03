@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Loading testing Match Snapshot 1`] = `
+<section
+  className="container--loading"
+>
+  <h1>
+    Loading...
+  </h1>
+</section>
+`;

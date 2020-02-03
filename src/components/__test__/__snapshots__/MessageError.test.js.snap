@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`MessageError testing Match Snapshot 1`] = `
+<div
+  className="form__message-error"
+>
+  <figure>
+    <img
+      alt="Error Message Login"
+      src="test-file-stubs"
+    />
+  </figure>
+  <p>
+    Usuario/Contraseña invalido! 
+  </p>
+</div>
+`;
