@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserItem testing Match Snapshot 1`] = `
+<div
+  className="user--item"
+>
+  <p
+    className="user--item_email"
+  />
+  <p
+    className="user--item_wrong"
+  />
+  <input
+    className="user--item_input"
+    id="admin"
+    name="admin"
+    onChange={[Function]}
+    type="checkbox"
+  />
+  <button
+    onClick={[Function]}
+    type="button"
+  >
+    Eliminar
+  </button>
+</div>
+`;

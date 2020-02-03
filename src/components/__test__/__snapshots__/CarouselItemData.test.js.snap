@@ -1,0 +1,18 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CarouselItemData testing Match Snapshot 1`] = `
+<div
+  className="carousel--item_data"
+>
+  <h2 />
+  <div
+    className="item--data"
+  >
+    <p
+      className="price"
+    >
+      -
+    </p>
+  </div>
+</div>
+`;

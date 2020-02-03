@@ -1,0 +1,58 @@
+.carousel--item_data {
+  display: flex;
+  justify-content: space-between;
+  width: 200px;
+  height: 70px;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 10px;
+  margin-right: 8px;
+  flex-shrink: 0;
+  background: linear-gradient(90deg,#2b2b2b, #171717);
+
+  h2 {
+    margin: 0;
+    font-size: 16px;
+    color: #FFF;
+  }
+
+  .item--data {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    p {
+      margin: 0;
+    }
+
+    .price {
+      color: #FFF;
+      font-weight: 600;
+    }
+
+    .percentage {
+      text-align: end;
+    }
+    .percentage.up {
+      color: #00E464;
+    }
+    .percentage.down {
+      color: #FD5F5D;
+    }
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .carousel--item_data {
+    width: 150px;
+    height: 60px;
+  
+    h2 {
+      font-size: 14px;
+    }
+  
+    .item--data {
+      font-size: 12px;
+    }
+  }
+}

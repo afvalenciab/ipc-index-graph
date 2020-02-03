@@ -1,0 +1,116 @@
+
+.index--graph {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 0px 50px;
+  padding: 15px 10px;
+  background: #FFF;
+  border-radius: 10px;
+
+  .graph--header {
+    display: flex;
+    flex-wrap: wrap;
+
+    .graph--date {
+      padding: 5px 10px;
+      font-weight: 900;
+      letter-spacing: 1.5px;
+      font-size: 18px;
+    }
+
+    .graph--current_value {
+      padding: 5px 10px;
+      
+      .current_text {
+        font-weight: 700;
+      }
+
+      .current_per {
+        padding-left: 5px;
+      }
+      .current_per.down {
+        color: #FD5F5D;
+      }
+      .current_per.up {
+        color: rgb(6, 177, 80);
+      }
+    }
+
+    .graph--options {
+      display: flex;
+      padding: 5px 0px;
+
+      figure {
+        width: 33px;
+        height: 33px;
+        margin: 0px 8px;
+        background: rgb(210, 212, 216);
+        padding: 5px;
+        border-radius: 5px;
+        cursor: pointer;
+        box-sizing: border-box;
+        will-change: transform;
+        opacity: .6;
+
+        img{
+          vertical-align: top;
+          width: 25px;
+        }
+      }
+
+      figure:active {
+        transform: scale(.95);
+      }
+
+      figure:hover {
+        opacity: 1;
+      }
+
+      figure.isActive {
+        opacity: 1;
+      }
+
+      .graph--candle_options {
+        display: flex;
+
+        .candle__min {
+          margin: 3px;
+          border-radius: 50%;
+          background: rgb(237, 236, 236);
+          width: 25px;
+          height: 25px;
+          font-size: 10px;
+          text-align: center;
+          line-height: 26px;
+          font-weight: 300;
+          cursor: pointer;
+          box-sizing: border-box;
+        }
+
+        .candle__min.isActive {
+          background: rgba(0,0,0,.8);
+          border: none;
+          color: #fff;
+          font-weight: 700;
+        }
+      }
+    }
+  }
+
+  .graph--timeseries{
+    height: 400px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .index--graph {
+    margin: 0px 20px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .index--graph {
+    margin: 0px 2px;
+  }
+}

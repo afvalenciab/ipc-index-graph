@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600,700,900&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Nunito Sans', Arial;
+  background-color: #F4F6F9;
+}
+
+.container--ipc {
+  display: grid;
+  grid-template: 80px 100px minmax(auto, 1fr) 30px / 100vw;
+  grid-gap: 10px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}

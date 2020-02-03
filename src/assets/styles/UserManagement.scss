@@ -1,0 +1,7 @@
+.container--management {
+  display: grid;
+  grid-template: 80px minmax(auto, 1fr) 30px / 100vw;
+  grid-gap: 10px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
