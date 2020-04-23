@@ -16,7 +16,7 @@ Check the application in the link below:
 ### Module to manage users
 ![manage users](https://ipc-index.s3-us-west-1.amazonaws.com/manageUsers.png)
 
-### Mobile Version (Responsive Desing)
+### Mobile Version (Responsive Design)
 ![ResponsiveDesign](https://ipc-index.s3-us-west-1.amazonaws.com/mobileversion.png)
 
 # Documentation
